@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "js工具库",
   "main": "src/index.ts",
+  "workspaces":[
+    "src/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "npx babel src/ --out-dir lib",
