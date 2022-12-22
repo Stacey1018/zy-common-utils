@@ -1,8 +1,8 @@
 {
   "name": "zy-common-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "js工具库",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "npx babel src/ --out-dir lib",
