@@ -1,8 +1,8 @@
 class Person {
-    sayname() {
-      return 'name'
-    }
+  sayname () {
+    return 'name'
   }
-  var john = new Person()
-  console.log(john)
-var promise = Promise.resolve('ok')
+}
+const john = new Person()
+console.log(john)
+// const promise = Promise.resolve('ok')
