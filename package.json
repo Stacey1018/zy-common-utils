@@ -1,12 +1,19 @@
 {
   "name": "zy-common-utils",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "js工具库",
-  "main": "./dist/index.js",
+  "main": "index.js",
+  "typings": "./typings",
+  "exports": {
+    "./*": "./lib-esm/*",
+    "./umd/*": "./"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "npx babel src/ --out-dir lib",
-    "build": "webpack --config webpack.base.js"
+    "build": "rm -rf dist/** && npm run build:umd && npm run build:lib-esm",
+    "build:umd": "webpack --config webpack.base.js",
+    "build:lib-esm": "tsc -p tsconfig.json --declarationDir ./dist/typings -m es6 --outDir dist/lib-esm"
   },
   "repository": {
     "type": "git",
