@@ -4,10 +4,13 @@ module.exports = {
   mode: 'production',
   entry: './src/index.ts',
   output: {
-    filename: '[name].bundle.js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    libraryTarget: 'umd',
-    library: 'zt-common-utils'
+    // library: 'zt-common-utils',
+    library: {
+      name: 'zy-common-utils',
+      type: 'umd'
+    }
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
